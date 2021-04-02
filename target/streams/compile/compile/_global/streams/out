@@ -1,0 +1,195 @@
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/AddressController.scala:4:33: object Execution is not a member of package play.api.libs.concurrent[0m
+[0m[[0m[31merror[0m] [0m[0mimport play.api.libs.concurrent.Execution.Implicits.defaultContext[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/PersonStorageController.scala:4:8: object Controller is not a member of package play.api.mvc[0m
+[0m[[0m[31merror[0m] [0m[0mimport play.api.mvc.{Controller, Result}[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/PersonStorageController.scala:10:39: not found: type Controller[0m
+[0m[[0m[31merror[0m] [0m[0mtrait PersonStorageController extends Controller {[0m
+[0m[[0m[31merror[0m] [0m[0m                                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/AddressController.scala:28:45: not found: value Action[0m
+[0m[[0m[31merror[0m] [0m[0m  def add(personId: String, kind: String) = Action.async(parse.json[Address]) { request =>[0m
+[0m[[0m[31merror[0m] [0m[0m                                            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/AddressController.scala:28:58: not found: value parse[0m
+[0m[[0m[31merror[0m] [0m[0m  def add(personId: String, kind: String) = Action.async(parse.json[Address]) { request =>[0m
+[0m[[0m[31merror[0m] [0m[0m                                                         ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/AddressController.scala:30:53: not found: value NotFound[0m
+[0m[[0m[31merror[0m] [0m[0m      case None               =>  Future.successful(NotFound("no " + kind + "address type"))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/AddressController.scala:34:31: not found: value NotFound[0m
+[0m[[0m[31merror[0m] [0m[0m            Future.successful(NotFound("person id " + personId + " not found"))[0m
+[0m[[0m[31merror[0m] [0m[0m                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/AddressController.scala:36:31: not found: value BadRequest[0m
+[0m[[0m[31merror[0m] [0m[0m            Future.successful(BadRequest(s"person $personId already has a $addressType address"))[0m
+[0m[[0m[31merror[0m] [0m[0m                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/AddressController.scala:38:75: not found: value Created[0m
+[0m[[0m[31merror[0m] [0m[0m            setAddress(personId, person, addressType, Some(request.body), Created.apply)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/AddressController.scala:57:48: not found: value Action[0m
+[0m[[0m[31merror[0m] [0m[0m  def update(personId: String, kind: String) = Action.async(parse.json[Address]) { request =>[0m
+[0m[[0m[31merror[0m] [0m[0m                                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/AddressController.scala:57:61: not found: value parse[0m
+[0m[[0m[31merror[0m] [0m[0m  def update(personId: String, kind: String) = Action.async(parse.json[Address]) { request =>[0m
+[0m[[0m[31merror[0m] [0m[0m                                                            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/AddressController.scala:59:53: not found: value NotFound[0m
+[0m[[0m[31merror[0m] [0m[0m      case None               =>  Future.successful(NotFound("no " + kind + "address type"))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/AddressController.scala:63:31: not found: value NotFound[0m
+[0m[[0m[31merror[0m] [0m[0m            Future.successful(NotFound("person id " + personId + " not found"))[0m
+[0m[[0m[31merror[0m] [0m[0m                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/AddressController.scala:65:31: not found: value NotFound[0m
+[0m[[0m[31merror[0m] [0m[0m            Future.successful(NotFound(s"person $personId does not have a $addressType address"))[0m
+[0m[[0m[31merror[0m] [0m[0m                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/AddressController.scala:67:75: not found: value Ok[0m
+[0m[[0m[31merror[0m] [0m[0m            setAddress(personId, person, addressType, Some(request.body), Ok.apply)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/AddressController.scala:82:48: not found: value Action[0m
+[0m[[0m[31merror[0m] [0m[0m  def remove(personId: String, kind: String) = Action.async {[0m
+[0m[[0m[31merror[0m] [0m[0m                                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/AddressController.scala:84:53: not found: value NotFound[0m
+[0m[[0m[31merror[0m] [0m[0m      case None               =>  Future.successful(NotFound("no " + kind + "address type"))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/AddressController.scala:88:31: not found: value NotFound[0m
+[0m[[0m[31merror[0m] [0m[0m            Future.successful(NotFound("person id " + personId + " not found"))[0m
+[0m[[0m[31merror[0m] [0m[0m                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/AddressController.scala:90:31: not found: value NotFound[0m
+[0m[[0m[31merror[0m] [0m[0m            Future.successful(NotFound(s"person $personId does not have a $addressType address"))[0m
+[0m[[0m[31merror[0m] [0m[0m                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/AddressController.scala:92:61: not found: value Ok[0m
+[0m[[0m[31merror[0m] [0m[0m            setAddress(personId, person, addressType, None, Ok.apply)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/AddressController.scala:107:37: not found: value NotFound[0m
+[0m[[0m[31merror[0m] [0m[0m      case None                 =>  NotFound("person id " + personId + " not found")[0m
+[0m[[0m[31merror[0m] [0m[0m                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/services/MongoPersonStorage.scala:8:13: object modules is not a member of package play[0m
+[0m[[0m[31merror[0m] [0m[0mimport play.modules.reactivemongo.json._[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/services/MongoPersonStorage.scala:9:13: object modules is not a member of package play[0m
+[0m[[0m[31merror[0m] [0m[0mimport play.modules.reactivemongo.json.collection._[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/PersonController.scala:4:33: object Execution is not a member of package play.api.libs.concurrent[0m
+[0m[[0m[31merror[0m] [0m[0mimport play.api.libs.concurrent.Execution.Implicits.defaultContext[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/PersonController.scala:17:14: not found: value Action[0m
+[0m[[0m[31merror[0m] [0m[0m  def list = Action.async {[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/PersonController.scala:19:7: not found: value Ok[0m
+[0m[[0m[31merror[0m] [0m[0m      Ok(Json.toJson(persons))[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/PersonController.scala:35:16: not found: value Action[0m
+[0m[[0m[31merror[0m] [0m[0m  def create = Action.async(parse.json[Person]) { request =>[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/PersonController.scala:35:29: not found: value parse[0m
+[0m[[0m[31merror[0m] [0m[0m  def create = Action.async(parse.json[Person]) { request =>[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/PersonController.scala:37:7: not found: value Created[0m
+[0m[[0m[31merror[0m] [0m[0m      Created(Json.toJson(person))[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/PersonController.scala:55:28: not found: value Action[0m
+[0m[[0m[31merror[0m] [0m[0m  def update(id: String) = Action.async(parse.json[Person]) { request =>[0m
+[0m[[0m[31merror[0m] [0m[0m                           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/PersonController.scala:55:41: not found: value parse[0m
+[0m[[0m[31merror[0m] [0m[0m  def update(id: String) = Action.async(parse.json[Person]) { request =>[0m
+[0m[[0m[31merror[0m] [0m[0m                                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/PersonController.scala:57:29: not found: value Ok[0m
+[0m[[0m[31merror[0m] [0m[0m      case Some(person) =>  Ok(Json.toJson(person))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/PersonController.scala:58:29: not found: value NotFound[0m
+[0m[[0m[31merror[0m] [0m[0m      case None         =>  NotFound(id + " not found")[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/PersonController.scala:68:28: not found: value Action[0m
+[0m[[0m[31merror[0m] [0m[0m  def remove(id: String) = Action.async {[0m
+[0m[[0m[31merror[0m] [0m[0m                           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/PersonController.scala:70:31: not found: value NoContent[0m
+[0m[[0m[31merror[0m] [0m[0m      case Some(nothing)  =>  NoContent[0m
+[0m[[0m[31merror[0m] [0m[0m                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/PersonController.scala:71:31: not found: value NotFound[0m
+[0m[[0m[31merror[0m] [0m[0m      case None           =>  NotFound(id + " not found")[0m
+[0m[[0m[31merror[0m] [0m[0m                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/PersonStorageController.scala:22:7: not found: value NotFound[0m
+[0m[[0m[31merror[0m] [0m[0m      NotFound("id" + message.substring(message.indexOf(":")) + " does not exist")[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/PersonStorageController.scala:24:14: value error is not a member of object play.api.Logger[0m
+[0m[[0m[31merror[0m] [0m[0m      Logger.error("Could not request database", se)[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/PersonStorageController.scala:25:7: not found: value InternalServerError[0m
+[0m[[0m[31merror[0m] [0m[0m      InternalServerError("Could not request database.")[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/V2PersonController.scala:3:33: object Execution is not a member of package play.api.libs.concurrent[0m
+[0m[[0m[31merror[0m] [0m[0mimport play.api.libs.concurrent.Execution.Implicits.defaultContext[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/V2PersonController.scala:13:14: not found: value Action[0m
+[0m[[0m[31merror[0m] [0m[0m  def list = Action.async {[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/V2PersonController.scala:23:7: not found: value Ok[0m
+[0m[[0m[31merror[0m] [0m[0m      Ok(Json.arr(transformedJsons.toSeq:_*))[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/models/person.scala:57:52: No Json deserializer found for type org.joda.time.DateTime. Try to implement an implicit Reads or Format for this type.[0m
+[0m[[0m[31merror[0m] [0m[0m    (JsPath \ "birthDate").read[DateTime](verifying((birth: DateTime) => 18 until 100 contains age(birth))) and[0m
+[0m[[0m[31merror[0m] [0m[0m                                                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/models/person.scala:68:33: No Json serializer found for type org.joda.time.DateTime. Try to implement an implicit Writes or Format for this type.[0m
+[0m[[0m[31merror[0m] [0m[0m    (JsPath \ "birthDate").write[DateTime] and[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/services/MongoPersonStorage.scala:5:8: value current is not a member of object play.api.Play[0m
+[0m[[0m[31merror[0m] [0m[0mimport play.api.Play.current[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/services/MongoPersonStorage.scala:6:33: object Execution is not a member of package play.api.libs.concurrent[0m
+[0m[[0m[31merror[0m] [0m[0mimport play.api.libs.concurrent.Execution.Implicits.defaultContext[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/services/MongoPersonStorage.scala:10:13: object modules is not a member of package play[0m
+[0m[[0m[31merror[0m] [0m[0mimport play.modules.reactivemongo.ReactiveMongoPlugin[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/services/MongoPersonStorage.scala:11:8: not found: object reactivemongo[0m
+[0m[[0m[31merror[0m] [0m[0mimport reactivemongo.api.Cursor[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/services/MongoPersonStorage.scala:12:8: not found: object reactivemongo[0m
+[0m[[0m[31merror[0m] [0m[0mimport reactivemongo.bson.{BSONDocument, BSONObjectID}[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/services/MongoPersonStorage.scala:21:20: not found: value ReactiveMongoPlugin[0m
+[0m[[0m[31merror[0m] [0m[0m  private val db = ReactiveMongoPlugin.db[0m
+[0m[[0m[31merror[0m] [0m[0m                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/services/MongoPersonStorage.scala:28:17: not found: type Cursor[0m
+[0m[[0m[31merror[0m] [0m[0m    val cursor: Cursor[Person] = personsCollection.find(Json.obj()).cursor[Person]()[0m
+[0m[[0m[31merror[0m] [0m[0m                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/services/MongoPersonStorage.scala:31:23: Cannot find an implicit ExecutionContext. You might add[0m
+[0m[[0m[31merror[0m] [0m[0man (implicit ec: ExecutionContext) parameter to your method.[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mThe ExecutionContext is used to configure how and on which[0m
+[0m[[0m[31merror[0m] [0m[0mthread pools asynchronous tasks (such as Futures) will run,[0m
+[0m[[0m[31merror[0m] [0m[0mso the specific ExecutionContext that is selected is important.[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mIf your application does not define an ExecutionContext elsewhere,[0m
+[0m[[0m[31merror[0m] [0m[0mconsider using Scala's global ExecutionContext by defining[0m
+[0m[[0m[31merror[0m] [0m[0mthe following:[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mimplicit val ec: scala.concurrent.ExecutionContext = scala.concurrent.ExecutionContext.global[0m
+[0m[[0m[31merror[0m] [0m[0m    futureList.recover(throwStorageException)[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/services/MongoPersonStorage.scala:39:22: not found: value BSONDocument[0m
+[0m[[0m[31merror[0m] [0m[0m      val selector = BSONDocument("_id" -> getBSONID(id))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/services/MongoPersonStorage.scala:88:38: not found: type BSONObjectID[0m
+[0m[[0m[31merror[0m] [0m[0m  private def getBSONID(id: String): BSONObjectID = {[0m
+[0m[[0m[31merror[0m] [0m[0m                                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/services/MongoPersonStorage.scala:40:22: not found: value BSONDocument[0m
+[0m[[0m[31merror[0m] [0m[0m      val modifier = BSONDocument("$set" -> Json.toJson(person))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/services/MongoPersonStorage.scala:64:22: not found: value BSONDocument[0m
+[0m[[0m[31merror[0m] [0m[0m      val selector = BSONDocument("_id" -> getBSONID(id))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/services/MongoPersonStorage.scala:78:22: not found: value BSONDocument[0m
+[0m[[0m[31merror[0m] [0m[0m      val selector = BSONDocument("_id" -> getBSONID(id))[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/services/MongoPersonStorage.scala:90:7: not found: value BSONObjectID[0m
+[0m[[0m[31merror[0m] [0m[0m      BSONObjectID(id)[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/services/MongoPersonStorage.scala:105:14: value error is not a member of object play.api.Logger[0m
+[0m[[0m[31merror[0m] [0m[0m      Logger.error("Could not request MongoDB", t)[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/V2PersonController.scala:18:33: symbol literal is deprecated; use Symbol("addresses") instead[0m
+[0m[[0m[31merror[0m] [0m[0m          __.json.update( (__ \ 'addresses).json.pick ) andThen[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/akash/Desktop/playrest/app/controllers/V2PersonController.scala:19:17: symbol literal is deprecated; use Symbol("addresses") instead[0m
+[0m[[0m[31merror[0m] [0m[0m          (__ \ 'addresses).json.prune[0m
+[0m[[0m[31merror[0m] [0m[0m                ^[0m
+[0m[[0m[31merror[0m] [0m[0m61 errors found[0m
